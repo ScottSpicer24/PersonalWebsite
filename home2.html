@@ -12,58 +12,208 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+        <style>
+            .header{
+                background:url("Pic_of_me_SF.jpg") no-repeat top center fixed;
+                background-size: cover;
+                height: 100vh;
+                width: 100%;
+                margin: 0;
+                padding-left: 0px;
+                padding-right:0px;
+                color: black;
+                text-align: center;
+                font-size: 50px;
+            }
+            .standard{
+                font-family: 'Fira Sans', sans-serif;
+                background-color: rgb(240,240,240);
+            }
+            .section-line-break{
+                width: 65%;
+                background-color: goldenrod;
+                margin: auto;
+                height: 6px;
+                border: none;
+            }
+            .timeline-break{
+                width: 15%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .scrolled-pic{
+                background:url("skyline.jpg") no-repeat top center fixed;
+                background-size: cover;
+                height: 65vh;
+                width: 100%;
+                margin: 0;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-bottom: 100px;
+                color: black;
+                text-align: center;
+                font-size: 50px;
+            }
+        </style>
         <title>Scott's Site</title>
     </head>
 
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid standard">
             <div class="row">
-                <div class="card" style="height : 100vh; width  : 100%; padding-left: 0px; padding-right: 0px;">
-                    <img src="Pic_of_me_SF.jpg" class="card-img" alt="Me" style="height : 100%; width  : auto;">
-                    <div class="card-img-overlay" style="left: 50%; top: 25%; font-family: 'Fira Sans', sans-serif; font-size: xxx-large">
-                        <h1 class="card-title" style="font-size: 5vw">Scoot Spicy</h1>
-                        <p class="card-text" style="font-size: 3vw">The Man, The Myth, The Legend</p>  
+                <div class="card" style="padding-left: 0px; padding-right:0px;">
+                    <div class="header">
+                        <div class="card-img-overlay" style="left: 50%; top: 25%; font-size: xxx-large">
+                            <h1 class="card-title" style="font-size: 5vw">Scott Spicer</h1>
+                            <p class="card-text" style="font-size: 3vw">The Man, The Myth, The Legend</p>  
+                        </div>
                     </div>  
                 </div>
             </div>
             <div class="row">
                 <!--about me / story-->
-                <div class="card text-center" style="padding-top: 25px; padding-left: 25%; padding-right: 25%; font-family: 'Fira Sans', sans-serif; background-color: rgb(190,190,190);">
-                    <h1 class="card-title">My Story</h1>
+                <div class="text-center" style="padding-top: 30px; padding-bottom: 30px; padding-left: 25%; padding-right: 25%;">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">My Story</h1>
                     <p class="card-body">
-                        In the fall of 2017 I decided to persue a degree in industrial engineering at the University of Central Florida
-                        and started learning about manufacturing, statistics and process improvement. 
-                        While pursuing that degree 
-                        I interned at the Frito-Lay manufacturing plant in Casa Grande, Arizona and worked to reduce their water usage.
-                        After I graduated in December of 2021 I started working at the Frito-Lay manufacturing plant in 
-                        Orlando on the night shift managing their maintenance team.
+                        In the fall of 2017, I decided to pursue a degree in industrial engineering at the University of Central Florida, 
+                        where I gained knowledge in manufacturing, statistics, and process improvement. During my studies, I had the opportunity to 
+                        intern at the Frito-Lay manufacturing plant in Casa Grande, Arizona, where my focus was on reducing water usage. 
+                        Upon graduating in December 2021, I began working at the Frito-Lay manufacturing plant in Orlando, 
+                        where I was managing the maintenance team on the night shift.
                     </p>
                     <p class="card-body">
-                        After I had started working there for a while I quickly realized that this was more of a management position 
-                        and less of and engineering one so I started thinking about getting back into engineering. 
-                        While contemplating this I remembered how my favorite classes in college were my CS classes so, 
-                        I started to teach myself programming while working. I enjoyed it so much that I ultimately decided to 
-                        quit my job and go back to school for computer science to persue it full time. 
+                        After working there for a while, I quickly realized that the position was more focused on management rather than engineering. 
+                        This realization prompted me to contemplate returning to the engineering field. During this period of contemplation, 
+                        I recalled how much I enjoyed my computer science classes in college. As a result, I began teaching myself 
+                        programming while continuing to work. I found immense satisfaction in this pursuit, which ultimately led me to make 
+                        the decision to quit my job and pursue computer science full-time by returning to school. 
                     </p>
                 </div>
             </div>
+            <hr class="section-line-break">
             <div class="row">
-                <div class="card text-center" style="font-family: 'Fira Sans', sans-serif; background-color: rgb(190,190,190);">
-                    <h1 class="card-title">Work and Educational Experience</h1>
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Work and Educational Experience</h1>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="UCF_logo.png" style="height: 100px; width: 100px; float: right; padding-right: 0;">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">University of Central Florida</h4>
+                        <p>B.S. in Computer Science, Jan 2023 - Dec 2024 (Expected)<br>Orlando, FL</p>
+                        <p style="padding-bottom: 15px;">
+                            To determine if a career switch was the best move for me, I embarked on learning programming by taking 
+                            two different versions of Harvard's CS50 course, as well as Princeton's course on data structures 
+                            and algorithms. It was through these experiences that I discovered a true passion for programming and 
+                            made the decision to commit to it full-time. Subsequently, I returned to school to pursue computer science, 
+                            with only the CS-related classes remaining as I had already completed the non-CS requirements for my degree. 
+                            Since resuming my studies, I have successfully completed courses such as Computer Science 1 
+                            (data structures and algorithms), object-oriented programming, security in computing, discrete mathematics, 
+                            among others. In addition to my coursework, I have also undertaken personal projects, 
+                            including the development of this website.
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <hr class="timeline-break">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="frito_lay_logo.png" style="height: 100px; width: 125px; float: right; padding-right: 0;">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">Frito-Lay</h4>
+                        <p>Supply Chain Leader, Jan 2022 - Dec 2022<br>Orlando, FL</p>
+                        <p style="padding-bottom: 15px;">
+                            As a manager in a fast-paced manufacturing environment, I effectively led a team of 4 to 8 mechanics on a daily basis, 
+                            with a total team size of 12. I provided guidance and direction to the team, ensuring they prioritized between 
+                            different emergency equipment breakdown calls and their scheduled work. Additionally, I closely monitored and 
+                            recorded the completion of scheduled work, work order backlog, emergency equipment breakdown calls, and 
+                            overall equipment health. Collaborating with operators, mechanics, and other subject matter experts on-site, 
+                            I actively contributed to determining, planning, and monitoring equipment efficiency improvement projects. 
+                            This involved both ongoing and future initiatives aimed at enhancing equipment performance.
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <hr class="timeline-break">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="frito_lay_logo.png" style="height: 100px; width: 125px; float: right; padding-right: 0;">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">Frito-Lay</h4>
+                        <p>Supply Chain Intern, Summer 2021<br>Casa Grande, AZ</p>
+                        <p style="padding-bottom: 15px;">
+                            While studying the supply chain practices at the Frito-Lay manufacturing plant in Casa Grande, Arizona, 
+                            I successfully completed a water resource conservation project resulting in an annual savings of over 3 million gallons. 
+                            Throughout the project, I collaborated with site team members to implement quick wins and optimize the corn washing systems 
+                            to meet IPS (Industrial Process Systems) standards. Additionally, I devised a comprehensive plan 
+                            for the installation of digital flowmeters, which will streamline the execution of future water conservation projects.
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <hr class="timeline-break">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="UCF_logo.png" style="height: 100px; width: 100px; float: right; padding-right: 0;">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">University of Central Florida</h4>
+                        <p>B.S. in Industrial Engineering, Minor in Mathematics, Aug 2017 - Dec 2021<br>Orlando, FL</p>
+                        <p style="padding-bottom: 30px;">
+                            I attended UCF, where I initially pursued a degree in industrial engineering while also 
+                            obtaining a minor in mathematics to enhance my skillset. Throughout my studies, 
+                            I took various courses such as quality engineering, system simulation, and empirical methods. 
+                            These courses provided me with diverse perspectives on breaking down, analyzing, and improving systems. 
+                            I applied statistical methods, lean principles, and Six Sigma techniques to drive improvements.
+                            <br>One notable project during my major involved simulating a deli operation to optimize the shelf 
+                            life of hot food, ensuring the quality and safety of the food met customer requirements. Additionally, 
+                            I conducted a survey and collected data to perform hypothesis tests, single and multi-factor ANOVAs, 
+                            and developed a linear regression model. These analyses aimed to identify factors influencing a 
+                            student's preference for online courses versus traditional lectures.
+                        </p>
+                    </div>
+                    <div class="col"></div>
                 </div>
             </div>
-        </div>
-        
 
-        
-        </div>
+            <hr class="section-line-break">
 
-        <div>
-            <!--work and school (maybe split up)-->
-        </div>
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Skills</h1>
+                </div>
+                <div class="col"></div>
+                <div class="col-7" style="text-align: center;">
+                    <h5>Languages: C, Python, Java, HTML & CSS, JavaScript</h5>
+                    <h5>Other Software: Microsoft office, Minitab, Simio Simulation</h5>
+                    <p style="padding-bottom: 20px;">Both in order of experience amount. <br>You can view some of the my work for my classes and all of my personal work on GitHub.</p>
+                </div>
+                <div class="col"></div>
+            </div>
 
-        <div>
-            <!--skills and projects-->
-        </div>
+            <div class="row">
+                <div class="scrolled-pic"></div>
+            </div> 
 
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Information & Links</h1>
+                </div>
+                <div class="col">
+                    <p style="float: right; padding-top: 75px;">Email: scottspicer24@gmail.com</p>
+                </div>
+                <div class="col-4" style="text-align: center; padding-bottom: 50px;">
+                    <a href="https://github.com/ScottSpicer24" style="margin: auto;"><img src="GitHub-Logo.svg" alt="GitHub" width="150px" height="150px"></a>
+                    <a href="resume_website.pdf" download="Resume_Scott_Spicer"><img src="Resume-logo.png" alt="Resume" width="150px" height="150px"></a>
+                    <a href="https://discordapp.com/users/1067085628686221382"><img src="Discord_Logo.svg" alt="Discord" width="125px" height="125px"></a>
+                </div>
+                <div class="col">
+                    <p style="float: left; padding-top: 75px;">Phone: (813) 924-4934</p>
+                </div>               
+            </div>
+        </div>
     </body>
