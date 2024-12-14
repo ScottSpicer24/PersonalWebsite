@@ -24,7 +24,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v11
         with:
-          role-to-assume: arn:aws:iam::<AWS_ACCOUNT_ID>:role/<ROLE_NAME>
+          role-to-assume: arn:aws:iam::696816923853:role/Full-github-Full-S3 # ARN of IAM role it is assuming
           aws-region: us-east-1
 
       # Step 3: Sync files to the S3 bucket
