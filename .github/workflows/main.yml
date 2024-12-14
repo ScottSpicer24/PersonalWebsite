@@ -31,10 +31,10 @@ jobs:
       - name: Sync files to S3
         run: | # pipe is for multi line command, \ is for a new line in multiline command
           aws s3 sync . s3://scottspicer24-portfolio-website \ 
-            --exclude ".git/*" \  
-            --exclude ".github/*" \ 
-            --exclude "README.md" \ 
-            --exclude "*.mp4" \ 
-            --exclude ".vscode/*" \ 
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "README.md" \
+            --exclude "*.mp4" \
+            --exclude ".vscode/*" \
             --exclude "__pycache__/*"
 
