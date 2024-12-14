@@ -1,13 +1,40 @@
-name: Upload Website
+name: Update S3
 
+# Trigger the workflow on push events to the main branch
 on:
   push:
     branches:
-    - main
+      - main
+
+# Set necessary permissions for the workflow
+permissions:
+  contents: read
+  id-token: write  # Needed for OIDC token
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-        - uses: actions/checkout@main
-        
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Configure AWS credentials using OIDC
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v11
+        with:
+          role-to-assume: arn:aws:iam::<AWS_ACCOUNT_ID>:role/<ROLE_NAME>
+          aws-region: us-east-1
+
+      # Step 3: Sync files to the S3 bucket
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://scottspicer24-portfolio-website \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "README.md"
+            --exclude "Misu8min.mp4"
+            --exclude "song_classifier_presentation.mp4"
+
