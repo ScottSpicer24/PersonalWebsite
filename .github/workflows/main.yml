@@ -30,11 +30,5 @@ jobs:
       # Step 3: Sync files to the S3 bucket
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://scottspicer24-portfolio-website \
-            --delete \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --exclude "README.md"
-            --exclude "Misu8min.mp4"
-            --exclude "song_classifier_presentation.mp4"
+          aws s3 sync . s3://scottspicer24-portfolio-website \ --delete \ --exclude ".git/*" \ --exclude ".github/*" \ --exclude "README.md" --exclude "*.mp4"
 
