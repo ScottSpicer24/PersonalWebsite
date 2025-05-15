@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+        <style>
+            .header{
+                background:url("Pic_of_me_SF.jpg") no-repeat top center fixed;
+                background-size: cover;
+                height: 100vh;
+                width: 100%;
+                margin: 0;
+                padding-left: 0px;
+                padding-right:0px;
+                color: black;
+                text-align: center;
+                
+            }
+            .header-text{
+                left: 50%; 
+                top: 25%; 
+                font-size: xxx-large;
+                font-size: 6vw;
+            }
+            .standard{
+                font-family: 'Fira Sans', sans-serif;
+                background-color: rgb(240,240,240);
+            }
+            .story-text{
+                padding-top: 30px; 
+                padding-bottom: 30px; 
+                padding-left: 25%; 
+                padding-right: 25%;
+            }
+            .section-line-break{
+                width: 65%;
+                background-color: goldenrod;
+                margin: auto;
+                height: 6px;
+                border: none;
+            }
+            .section-break-mobile{
+                width: 0px;
+                background-color: rgb(240, 240, 240);
+                margin: 0px;
+                height: 0px;
+                border: none;
+            }
+            .timeline-break{
+                width: 15%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .timeline-break-proj {
+                width: 15%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            .col-6{
+                padding-right: 10%;
+            }
+            .UCF-logo{
+                height: 100px; 
+                width: 100px; 
+                float: right; 
+                padding-right: 0%;
+            }
+            .AWS-Dev-Cert-logo{
+                height: 125px; 
+                width: 125px; 
+                float: right; 
+                margin-left: 0%;
+            }
+            .degrs-certs-section{
+                height: 100%; 
+                /*width: 100px;*/ 
+                float: right; 
+                padding-right: 0%;
+            }
+            .cert-text{
+                padding-top: 20px;
+            }
+            .skills-text{
+                text-align: center;
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-bottom: 30px;
+            }
+            .scrolled-pic{
+                background:url("skyline.jpg") no-repeat top center fixed;
+                background-size: cover;
+                height: 65vh;
+                width: 100%;
+                margin: 0;
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-bottom: 100px;
+                color: black;
+                text-align: center;
+                font-size: 50px;
+            }
+            .email{
+                text-align: right;
+                padding-top: 75px;
+            }
+            .pic-links{
+                text-align: center; 
+                padding-bottom: 50px;
+                padding-right: 0%;
+            }
+            .cell-num{
+                text-align: left; 
+                padding-top: 75px;
+            }
+            .video-container {
+                position: relative;
+                width: 100%;
+                max-width: 100%;
+                padding: 20px;
+                /*padding-top: 56.25%; /* 16:9 aspect ratio */
+                overflow: hidden;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            /* Style the video to fill the container */
+            .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensure the video covers the container without distortion */
+            }
+
+            .iframe-container {
+                position: relative;
+                width: 97%;
+                max-width: 100%;
+                padding-top: 56.25%; /* 16:9 aspect ratio */
+                overflow: hidden;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none; /* Ensure there are no borders around the iframe */
+                object-fit: cover;
+            }
+            .video-thumbnail {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .project-text{
+                padding-left: 20px;
+            }
+
+            ul {
+                list-style-type: disc; /* The default bullet style */
+                padding-left: 20px; /* Adds padding to the left of the list */
+            }
+
+
+            @media screen and (max-width: 479px) {
+                /* start of phone styles */
+                .header{
+                    background:url("Pic_of_me_SF_mobile_test.jpg") no-repeat top center fixed;
+                    background-size: auto, 100%;
+                    height: 100vh;
+                    width: 100%;
+                    margin: 0;
+                    padding-left: 0px;
+                    padding-right:0px;
+                    color: black;
+                    text-align: center;
+                    font-size: 50px;
+                }
+                .header-text{ 
+                    top: 4%;
+                    left: 0%; 
+                    font-size: xxx-large;
+                    font-size: 12vw;
+                }
+                .story-text{
+                    padding-top: 30px; 
+                    padding-bottom: 30px; 
+                    padding-left: 5%; 
+                    padding-right: 5%;
+                }
+                .col-4{
+                    order:1;
+                    float: center;
+                    margin-left: 37%;
+                    margin-right: 30%;
+                }
+                .col-6{
+                    width: 100vw;
+                    text-align: center;
+                    order: 2;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                    margin-left: 3%;
+                }
+                .cert-icon-mobile{
+                    order:1;
+                    float: center;
+                    margin-left: 30%;
+                    margin-right: 30%;
+                }
+                .cert-text{
+                    width: 100vw;
+                    text-align: center;
+                    order: 2;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                    margin-left: 3%;
+                }
+                .col-7{
+                    width: 100vw;
+                    text-align: center;
+                    order: 2;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                    margin-left: 3%;
+                }
+                .skills-text{
+                    text-align: center;
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
+                .section-break-mobile{
+                    width: 65%;
+                    background-color: goldenrod;
+                    margin: auto;
+                    height: 6px;
+                    border: none;
+                }
+                .scrolled-pic{
+                    height: 0px;
+                    width: 0px;
+                    margin: 0;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-bottom: 0px;
+                    color: black;
+                    text-align: center;
+                    font-size: 50px;
+                }
+                .email{
+                    order: 1;
+                    text-align: center;
+                    padding-top: 0%;
+                    padding-left: 25%;
+                    padding-right: 25%;
+                }
+                .pic-links{
+                    order: 3;
+                    text-align: center;
+                    padding-left: 25%;
+                    padding-right: 25%;
+                }
+                .cell-num{
+                    order: 2;
+                    text-align: center;
+                    padding-top: 0%;
+                    padding-left: 25%;
+                    padding-right: 25%;
+                }
+                .video-container {
+                    padding-top: 5%; /* Adjust aspect ratio if needed for smaller screens */
+                }
+            }
+        </style>
+        <title>Scott's Site</title>
+    </head>
+
+    <body>
+        <div class="container-fluid standard">
+            <div class="row">
+                <div class="card" style="padding-left: 0px; padding-right:0px;">
+                    <div class="header">
+                        <div class="card-img-overlay header-text">
+                            <h1 class="header-text">Scott Spicer</h1>
+                            <p class="header-text" style="font-size: 3vw">The Man, The Myth, The Legend</p>    
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Degrees & Certifications</h1>
+                </div>
+                
+                    <div class="row degrs-certs-section">
+                        <div class="col-5 cert-icon-mobile">
+                            <img src="UCF_logo.png" class="AWS-Dev-Cert-logo">
+                        </div>
+                        <div class="col-5 cert-text">
+                            <h4 style="padding-top: 10px;">Masters of Science in Computer Science</h4>
+                            <p> University of Central Florida, Orlando, FL <br> Jan 2025 - Dec 2025, Current GPA: 3.67</p>
+                        </div>
+                    </div>
+
+                    <hr class="timeline-break-proj">
+                    
+                    <div class="row degrs-certs-section">
+                        <div class="col-5 cert-icon-mobile">
+                            <img src="UCF_logo.png" class="AWS-Dev-Cert-logo">
+                        </div>
+                        <div class="col-5 cert-text">
+                            <h4 style="padding-top: 10px;">Bachelors of Science in Computer Science</h4>
+                            <p> University of Central Florida, Orlando, FL <br> Jan 2023 - Dec 2024, Final GPA: 3.74</p>
+                        </div>
+                    </div>
+                        <hr class="timeline-break-proj">
+                    
+                    <div class="row degrs-certs-section">
+                        <div class="col-5 cert-icon-mobile">
+                            <img src="AWS-Certified-Developer-Associate_badge.png" class="AWS-Dev-Cert-logo">
+                        </div>
+                        <div class="col-5 cert-text">
+                            <h4 style="padding-top: 10px;">AWS Certified Developer Associate (DVA-C02)</h4>
+                            <p> Active: September 25, 2024 to September 25, 2027</p>
+                        </div>
+                    </div>
+
+                    <hr class="timeline-break-proj">
+
+                    <div class="row degrs-certs-section">
+                        <div class="col-5 cert-icon-mobile">
+                            <img src="UCF_logo.png" class="AWS-Dev-Cert-logo">
+                        </div>
+                        <div class="col-5 cert-text">
+                            <h4 style="padding-top: 10px;">Bachelors of Science in Industrial Engineering</h4>
+                            <p>Minor in Mathematics <br> University of Central Florida, Orlando, FL <br> Aug 2017 - Dec 2021, Final GPA: 3.80</p>
+                        </div>
+                    </div>
+
+
+                <div class="row">
+                    <hr class="timeline-break-proj">
+                </div>
+                
+            </div>
+
+            <hr class="section-line-break">
+
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Tech Skills</h1>
+                </div>
+
+                <div class="row">
+                    <div class="skills-text">
+                        <h5><strong>Languages</strong> - <u>Python</u>, <u>Java</u>, TypeScript, JavaScript, C#, C, SQL, HTML/CSS</h5>
+                        <h5><strong>Developer Tools</strong> - <u>Amazon Web Service</u>, <u>Git</u>, GitHub, GitHub Actions, Node.JS, Slurm, NoSQL, Expo, Jira, Batch, Bash</h5>
+                        <h5><strong>Frameworks</strong> - React Native, .NET, Flask, Bootstrap</h5>
+                        <h5><strong>Libraries</strong> - <u>Pytorch</u>, <u>NumPy</u>, <u>Matplotlib</u>, <u>Scikit-Learn</u>, Pandas, Tensorflow, Windows Forms</h5>
+                        <h5><strong>IDEs</strong> - <u>VS Code</u>, Visual Studio, Jupyter Notebook, Google Colab, IntelliJ</h5>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-line-break">
+
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Projects</h1>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-7 center">
+                        <div class="project-text">
+                            <h3>MiSu - Smart Home Acccess Control</h3>
+                            <h5><u>Tools:</u></h5>
+                            <p>
+                                <strong>Core</strong> - React native, AWS, Android, iOS, Raspberry Pi<br>
+                                <strong>AWS</strong> - API Gateway, Lambda, DynamoDB, Congnito, Amplify, IoT Core, IAM<br>
+                                <strong>Supplementary</strong> - Home Assistant, Git, GitHub, Jira, Node.JS, Expo, Command Prompt, PowerShell, VS Code
+                            </p>
+                            <h5><u>Project Overview:</u></h5>
+                            <p>
+                               <strong>Mi casa es Su casa</strong>, my senior design project, was a smart home app that allows users to control all their 
+                               smart devices and securely share access with guests. Users retain complete control over what actions guests can perform and when.<br>
+                               <br>
+                               Our team was responsible for <strong>version 4</strong> of the app, which previously had not been maintained for two years. 
+                               Due to extensive deprecations, we performed a full rebuild, improving data flow, management, and user experience.<br>
+
+                            </p>
+                            <p>   
+                               <h5><u>My Contributions:</u></h5>
+                               <ul>
+                                <li>Led AWS cloud engineering efforts.</li>
+                                <li>Tested, debugged, and replaced deprecated Lambda functions and REST APIs.</li>
+                                <li>Designed and implemented a WebSocket solution to optimize real-time data flow.</li>
+                                <li>Added new features, including guest access requests and real-time log updates.</li>
+                               </ul>
+                               
+
+                            </p>
+                            <p><h5><u>Demo Video:</u></h5></p>
+                        </div>
+                                                
+                        <video class="video-container" controls>
+                            <source src="./Misu8min.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <hr class="timeline-break-proj">
+
+                <div class="row">
+                    <div class="col-7 center">
+                        <div class="project-text">
+                            <h3>CLEAR - Comparative Learning and Evaluation of AI and Traditional Denoisers</h3>
+                            <p>
+                                <h5><u>Tools:</u></h5>
+                                <strong>Core</strong> - Python Scripts<br>
+                                <strong>Supplementary</strong> - OpenCV, Slurm, VS Code, Git, GitHub<br>
+                            </p>
+                            <p>
+                                <h5><u>Project Overview:</u></h5>
+                                <!--This study compares AI-based and traditional video denoisers using the UCF-101 dataset, focusing on denoising performance across four noise types: 
+                                Gaussian, Salt-and-Pepper, Poisson, and Speckle. Metrics such as Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), 
+                                and Visual Information Fidelity (VIF) are used to evaluate denoising quality, while computational efficiency is measured through processing time and 
+                                Frames Per Second (FPS). The results reveal that AI-based denoisers like VRT excel in complex noise restoration but require substantial computational 
+                                resources, whereas traditional denoisers demonstrate better efficiency at the cost of quality. -->
+                                This study compares AI-based and traditional video denoisers using the UCF-101 dataset, focusing on denoising performance across four noise types: 
+                                Gaussian, Salt-and-Pepper, Poisson, and Speckle. Metrics such as PSNR, SSIM, VIF are used to evaluate denoising quality, 
+                                while computational efficiency is measured through processing time per frame. <br>
+                                <br>
+                                The results reveal that AI-based denoisers like VRT excel in complex noise restoration but require substantial computational 
+                                resources, whereas traditional denoisers demonstrate better efficiency at the cost of quality.
+                               <br>
+                            </p>
+                            <p> 
+                               <h5><u>My Contributions:</u></h5>
+                                <ul>
+                                    <li>Applied four distinct noise types to over 13,000 videos, each ranging from 3 to 7 minutes in length.</li>
+                                    <li>Researched and optimized hyperparameter settings for the Fast Non-Local Means function through extensive testing.</li>
+                                    <li>Analyzed denoised videos, generated performance metrics and visualizations, and presented findings effectively.</li>
+                                </ul>
+
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="timeline-break-proj">
+
+                <div class="row">
+                    <div class="col-7 center">
+                        <div class="project-text">
+                            <h3>Song Year Classifier</h3>
+                            <p>
+                                <h5><u>Tools:</u></h5>
+                                <strong>Core</strong> - Python Scripts<br>
+                                <strong>Supplementary</strong> - PyTorch, Numpy, Scikit-Learn, Slurm, VS Code, Git, GitHub<br>
+                            </p>
+                            <p>
+                                <h5><u>Project Overview:</u></h5>
+                                Developed a feature tokenizer transformer AI model to classify the year of songs, spanning nearly a century (1922-2011), 
+                                using a subset of the Million Song Dataset. The model was trained on a large-scale dataset of 500,000 rows, 
+                                each with 90 attributes and corresponding labels.<br>
+                                <br>
+                                Utilized GPU acceleration to expedite model training on the UCF Newton GPU cluster. Tuned hyperparameters to improve
+                                model performance. Achieved a test accuracy of 66%, demonstrating the model's ability to predict song release years
+                                with reasonable accuracy.
+                                
+                            </p>
+                            <p><h5><u>Demo Video:</u></h5> <br></p>
+                        </div>
+                        
+                        <video class="video-container" controls>
+                            <source src="./song_classifier_presentation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <hr class="timeline-break-proj">
+
+                <div class="row">
+                    <div class="col-7 center">
+                        <div class="project-text">
+                            <h3>Spicy Fitness</h3>
+                            <p>
+                                <h5><u>Tools:</u></h5>
+                                <strong>Core</strong> - React native, AWS, Python, Android, iOS <br>
+                                <strong>AWS</strong> - API Gateway, Lambda, DynamoDB, Congnito, Amplify, IAM<br>
+                                <strong>Supplementary</strong> - Git, GitHub, Node.JS, Expo, VS Code
+                            </p>
+                            <p>
+                                <h5><u>Project Overview:</u></h5>
+                                Summer 2024 Solo project. One day in the gym I realized that there had to be a better way to track my workouts.
+                                After looking at a few that didn't have what I wanted, I decided to build my own. 
+                                This way, I could easily have log progressive overload from day to day while having the flexibility to adapt quickly and seemlessly on the fly.
+                            </p>
+                            <p><h5><u>Demo Video:</u></h5> <br></p>
+                        </div>
+                        
+                        <video class="video-container" controls>
+                            <source src="./FitnessAppDemo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <hr class="timeline-break-proj">
+
+                <div class="row">
+                    <div class="col-7 center">
+                        <div class="project-text">
+                            <h3>Online Mulitplayer Chess</h3>
+                            <p>
+                                <h5><u>Tools:</u></h5>
+                                <strong>Core</strong> - .NET, C#, Windows Form<br>
+                                <strong>Supplementary</strong> - AWS EC2, Visual Studio, Git, GitHub
+                            </p>
+                            <p>
+                                <h5><u>Project Overview:</u></h5>
+                                This project was part of my Processes for Object-Oriented Software Development class (COP 4331C). Our team developed an online multiplayer chess application that allows users to 
+                                Manage accounts, add and interact with friends, track elo scores, and play chess matches in real-time.
+                            </p>
+                            <p>
+                                <h5><u>My Contributions:</u></h5>
+                                <ul>
+                                    <li>Designed and implemented the game engine and its accompanying API for the chess game.</li>
+                                    <li>Conducted extensive testing of game engine logic to ensure compliance with official chess rules.</li>
+                                    <li>Set up the AWS infrastructure, including an EC2 instance, to enable WebSocket connections for real-time gameplay.</li>
+                                </ul>
+                            </p>
+                            <p>
+                                <h5><u>Demo Video:</u></h5> 
+                                Previously, this section featured an embedded YouTube demo video. 
+                                However, the video was made private by a former group member, and I no longer have access to it.
+                            </p>
+                        </div>
+                        
+                        <!--width="560" height="315" <video class="video-container" controls>
+                        <div class="iframe-container">
+                            <iframe 
+                            src="https://www.youtube.com/embed/veNG4NppCLQ?si=vQp16zJpnQgymH0T&amp;start=7" 
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        https://www.youtube.com/watch?v=veNG4NppCLQ-->
+                    </div>
+                </div>
+
+                <hr class="timeline-break-proj">
+
+                <div class="row">
+                    <div class="col-7 center">
+                        <div class="project-text">
+                            <h3>Wordle</h3>
+                            <p>
+                                <h5><u>Tools:</u></h5>
+                                <strong>Core</strong> - HTML/CSS, Python, and Flask<br>
+                                <strong>Supplementary</strong> - Bootstrap, Git, GitHub
+                            </p>
+                            <p>
+                                <h5><u>Project Overview:</u></h5>
+                                This was the first application I made with a front-end and a back-end that communicate with each other. 
+                                I completed it in the summer of 2023 with no clue how to create a front-end, much less how to get it create 
+                                an API to communicate with the backend. The 2 frameworks Flask and bootstrap were both wonderful tools and helped me 
+                                get closer to understanding how real software works.
+                            </p>
+                            <p><h5><u>Demo Video:</u></h5> <br></p>
+                        </div>
+                        
+                        
+                        <video class="video-container" controls>
+                            <source src="./WordleDemoVid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video> 
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <hr class="section-line-break">
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Work Experience</h1>
+                </div>
+
+                
+                <hr class="timeline-break">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="UCF_logo.png" class="UCF-logo">
+                    </div>
+                    <div class="col-6" style="padding-bottom: 15px;">
+                        <h4 style="padding-top: 10px;">University of Central Florida</h4>
+                        <p>Teaching Assistant, Jan 2024 - Dec 2024<br>Orlando, FL</p>
+                        <p style="padding-bottom: 15px;">
+                            Assisted in undergrad computer science courses, including 
+                                Computer Science 2, Systems Software, and Discrete Math. 
+                                Utilized Java and C to demonstrate core data structures and algorithms.
+                                Conducted weekly labs, office hours, and developed supplementary material to support students.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="timeline-break">
+                
+                <div class="row">
+                    <div class="col-4">
+                        <img src="frito_lay_logo.png" style="height: 100px; width: 125px; float: right; padding-right: 0;">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">Frito-Lay</h4>
+                        <p>Supply Chain Leader, Jan 2022 - Dec 2022<br>Orlando, FL</p>
+                        <p style="padding-bottom: 15px;">
+                            Managed in a fast-paced manufacturing environment, leading a team of 12 mechanics. 
+                            I provided guidance the team, prioritized between emergency breakdowns and scheduled work.
+                            Collaborated with various teammembers on-site, 
+                            to determine, plan, and monitor equipment efficiency improvement projects.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="timeline-break">
+                
+                <div class="row">
+                    <div class="col-4">
+                        <img src="frito_lay_logo.png" style="height: 100px; width: 125px; float: right; padding-right: 0;">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">Frito-Lay</h4>
+                        <p>Supply Chain Intern, Summer 2021<br>Casa Grande, AZ</p>
+                        <p style="padding-bottom: 15px;">
+                            Completed a water resource conservation project resulting in 
+                            an annual savings of over 3 million gallons by optimizing the corn washing systems. 
+                            Additionally, I devised a comprehensive plan for the installation of digital flowmeters, 
+                            streamlining future water conservation projects.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="timeline-break">
+                
+                <div class="row">
+                    <div class="col-4">
+                        <img src="pinchers.jpg" class="UCF-logo">
+                    </div>
+                    <div class="col-6">
+                        <h4 style="padding-top: 10px;">Pinchers Crab Shack</h4>
+                        <p>Expediter, Line Cook, Prep Cook, Dish Washer; Feb 2015 - Aug 2017<br>Tampa, FL</p>
+                        <p style="padding-bottom: 15px;">
+                            I began my career in high school as a dishwasher, quickly adapting to the fast-paced kitchen environment and
+                            demonstrating my ability to learn and take on new responsibilities. I progressed to prep cook, then line cook 
+                            and eventually expediter, the lead of the kitchen. 
+                        </p>
+                    </div>
+                </div>
+            
+            
+            </div>
+
+
+            <div class="row">
+                <div class="scrolled-pic"></div>
+            </div> 
+            <hr class="section-break-mobile">
+
+            <div class="row">
+                <div class="text-center standard">
+                    <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Information & Links</h1>
+                </div>
+                <div class="col email">
+                    <p>scottspicer24@gmail.com</p>
+                </div>
+                <div class="col-5 pic-links">
+                    <a href="https://github.com/ScottSpicer24" style="margin: auto;"><img src="GitHub-Logo.svg" alt="GitHub" width="150px" height="150px"></a>
+                    <a href="resume_website.pdf" download="Resume_Scott_Spicer"><img src="Resume-logo.png" alt="Resume" width="150px" height="150px"></a>
+                    <a href="https://discordapp.com/users/1067085628686221382"><img src="Discord_Logo.svg" alt="Discord" width="125px" height="125px"></a>
+                </div>
+                <div class="col cell-num">
+                    <p>(813) 924-4934</p>
+                </div>               
+            </div>
+        </div>
+    </body>
