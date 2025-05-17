@@ -72,9 +72,21 @@
             .col-6{
                 padding-right: 10%;
             }
+            .frito-logo{
+                height: 100px; 
+                width: 125px; 
+                float: right; 
+                padding-right: 0;
+            }
             .UCF-logo{
                 height: 100px; 
                 width: 100px; 
+                float: right; 
+                padding-right: 0%;
+            }
+            .corteva-logo{
+                height: 100px; 
+                width: 115px; 
                 float: right; 
                 padding-right: 0%;
             }
@@ -292,6 +304,29 @@
                 .video-container {
                     padding-top: 5%; /* Adjust aspect ratio if needed for smaller screens */
                 }
+                .UCF-logo{
+                    /*height: 100px; */
+                    /*width: 100px; */
+                    /* float: right; */
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: 25%;
+                }
+                .corteva-logo{
+                    /*height: 100px; */
+                    /*width: 115px; */
+                    /* float: right; */
+                    
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: 25%;
+                }
+                .frito-logo{
+                    /*height: 100px; */
+                    /*width: 125px; */
+                    padding-right: 0;
+                }
             }
         </style>
         <title>Scott's Site</title>
@@ -393,6 +428,10 @@
                     <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Projects</h1>
                 </div>
 
+                <!-- 
+                ADD A 1 SENTENCE DESC for each project. 
+                -->
+
                 <div class="row">
                     <div class="col-7 center">
                         <div class="project-text">
@@ -400,24 +439,32 @@
                             <h5><u>Tools:</u></h5>
                             <p>
                                 <strong>Core</strong> - Python, VS Code, Google Colab<br>
-                                <strong>AI Models</strong> - LLaVA, XCLIP, InternVideo2<br>
+                                <strong>AI Models</strong> - LLaVA, CLIP, InternVideo2<br>
                                 <strong>Libraries</strong> - Hugging Face, OpenCV, MoviePy, pySceneDetect, Numpy
                             </p>
                             <h5><u>Project Overview:</u></h5>
                             <p>
-                               UCF-101 is a popular action recognition dataset, but the dataset is old and biased across multiple domains. 
-                               I worked with a team 4 to debias the dataset across age, gender, race, hair color, and body type. 
-                               We were able to lower the chi-squared value of each bias categories and dominance ratio of the dataset by adding counterfactual videos to the dataset.
+                                UCF-101 is a widely used action-recognition dataset, but its original videos
+                                show significant bias across age, gender, race, hair color, and body type.
+                                Working in a team of four, we mitigated these biases by adding
+                                carefully-selected counterfactual videos, which reduced the
+                                χ² (chi-squared) imbalance score and the dominance ratio.
                             </p>
                             <p>   
                                <h5><u>My Contributions:</u></h5>
                                <ul>
-                                <li>Conducted in-depth research on cutting edge methods to debias a video dataset.</li>
-                                <li>Wrote a script to automatically detect a change in a scene and split the video based on those scenes.</li>
-                                <li>Used an AI model to perform activity verification on video scenes.</li>
-                                <li>Manually did quality assurance on video scenes, bias, and actions.</li>
+                                <li>Reviewed state-of-the-art techniques for debiasing video datasets and
+                                    shaped the team's methodology.</li>
+                                <li>Wrote a Python script that detects scene changes and automatically
+                                    splits videos into granular clips for analysis.</li>
+                                <li>Integrated an activity-verification model to confirm that each new
+                                    clip still depicts the intended action class.</li>
+                                <li>Performed manual QA on clips to validate action labels and bias tags,
+                                    ensuring high data quality.</li>
                                </ul>
                             </p>
+
+                            <img src="bias-101-workflow.png" class="video-container">
                         </div>
                     </div>
                 </div>
@@ -431,12 +478,16 @@
                             <h5><u>Tools:</u></h5>
                             <p>
                                 <strong>Core</strong> - Python, VS Code, Kaggle Notebooks<br>
-                                <strong>AI Models</strong> - LLaVA<br>
-                                <strong>Libraries</strong> - Hugging Face
+                                <strong>AI Models</strong> - LLaVA, DeepSeek-R1<br>
+                                <strong>Libraries</strong> - Hugging Face, Numpy
                             </p>
                             <h5><u>Project Overview:</u></h5>
                             <p>
-                               TODO: Write desc. Dataset: PMC-VQA
+                            Designed and trained a custom LLaVA-style model for medical visual question answering. 
+                            The system combines DeepSeek-R1 as the language backbone with a CLIP vision encoder, 
+                            jointly fine-tuned on 227 k image-question pairs from the open-source PMC-VQA dataset. 
+                            Leveraging chain-of-thought reasoning, the model delivers accurate, 
+                            explainable answers to complex medical queries.
                             </p>
 
                         </div>
@@ -453,12 +504,20 @@
                             <p>
                                 <strong>Core</strong> - Python, Google Colab <br>
                                 <strong>AI Models</strong> - DeepSeek-R1, LLaMA 3.2, Qwen2.5 Coder <br>
-                                <strong>Libraries</strong> - Hugging Face
+                                <strong>Libraries</strong> - Hugging Face, Numpy
                             </p>
                             <h5><u>Project Overview:</u></h5>
                             <p>
-                               TODO: Write desc. Dataset: HumanEval
+                                Built a two-stage pipeline of pre-trained AI models that automatically detects gaps in software 
+                                unit tests and then generates the missing test cases. The first model pinpoints untested code paths, 
+                                while the second synthesizes the necessary inputs, expected outputs, and test code. 
+                                I evaluated four model pairings on OpenAI's HumanEval benchmark and selected 
+                                the configuration that delivered the highest coverage and reliability. 
+                                The best pairing (Deepseek-R1 and Qwen2.5 Coder) improved line coverage by 41%. 
                             </p>
+
+                            
+                            <img src="UnitTester-workflow.png" class="video-container">
 
                         </div>
                     </div>
@@ -685,7 +744,21 @@
                 <div class="text-center standard">
                     <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Work Experience</h1>
                 </div>
-
+                
+                <hr class="timeline-break">
+                
+                <div class="row">
+                    <div class="col-4">
+                        <img src="Corteva_logo.png" class="corteva-logo">
+                    </div>
+                    <div class="col-6" style="padding-bottom: 15px;">
+                        <h4 style="padding-top: 10px;">Corteva Agriscience</h4>
+                        <p>Software Engineering Intern, May 2025 - Aug 2025<br>Des Moines, IA</p>
+                        <p style="padding-bottom: 15px;">
+                            Current Intern for thee R&D department at Corteva. 
+                        </p>
+                    </div>
+                </div>
                 
                 <hr class="timeline-break">
                 
@@ -709,7 +782,7 @@
                 
                 <div class="row">
                     <div class="col-4">
-                        <img src="frito_lay_logo.png" style="height: 100px; width: 125px; float: right; padding-right: 0;">
+                        <img src="frito_lay_logo.png" class="frito-logo">
                     </div>
                     <div class="col-6">
                         <h4 style="padding-top: 10px;">Frito-Lay</h4>
@@ -727,7 +800,7 @@
                 
                 <div class="row">
                     <div class="col-4">
-                        <img src="frito_lay_logo.png" style="height: 100px; width: 125px; float: right; padding-right: 0;">
+                        <img src="frito_lay_logo.png" class="frito-logo">
                     </div>
                     <div class="col-6">
                         <h4 style="padding-top: 10px;">Frito-Lay</h4>
@@ -772,7 +845,7 @@
                     <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Information & Links</h1>
                 </div>
                 <div class="col email">
-                    <p>scottspicer24@gmail.com</p>
+                    <p>scott.spicer@proton.me</p>
                 </div>
                 <div class="col-5 pic-links">
                     <a href="https://github.com/ScottSpicer24" style="margin: auto;"><img src="GitHub-Logo.svg" alt="GitHub" width="150px" height="150px"></a>
