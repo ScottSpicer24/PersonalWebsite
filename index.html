@@ -107,8 +107,8 @@
             }
             .skills-text{
                 text-align: center;
-                padding-left: 20%;
-                padding-right: 20%;
+                /*padding-left: 20%;
+                padding-right: 20%;*/
                 padding-bottom: 30px;
             }
             .scrolled-pic{
@@ -185,10 +185,11 @@
                 height: 100%;
                 object-fit: cover;
             }
+            
 
-            .project-text{
+            /*.project-text{
                 padding-left: 20px;
-            }
+            }*/
 
             ul {
                 list-style-type: disc; /* The default bullet style */
@@ -198,6 +199,11 @@
 
             @media screen and (max-width: 479px) {
                 /* start of phone styles */
+                /*
+                .row{
+                    padding-right: 0%;
+                }
+                */
                 .header{
                     background:url("Pic_of_me_SF_mobile_test.jpg") no-repeat top center fixed;
                     background-size: auto, 100%;
@@ -222,24 +228,22 @@
                     padding-left: 5%; 
                     padding-right: 5%;
                 }
-                .col-4{
+                .moible-col4 {
+                    width: 100vw;
                     order:1;
-                    float: center;
-                    margin-left: 37%;
-                    margin-right: 30%;
                 }
-                .col-6{
+                .moible-col6{
                     width: 100vw;
                     text-align: center;
                     order: 2;
                     padding-left: 3%;
                     padding-right: 3%;
-                    margin-left: 3%;
+                    
                 }
                 .cert-icon-mobile{
                     order:1;
                     float: center;
-                    margin-left: 30%;
+                    margin-left: 37%;
                     margin-right: 30%;
                 }
                 .cert-text{
@@ -250,18 +254,10 @@
                     padding-right: 3%;
                     margin-left: 3%;
                 }
-                .col-7{
-                    width: 100vw;
-                    text-align: center;
-                    order: 2;
-                    padding-left: 3%;
-                    padding-right: 3%;
-                    margin-left: 3%;
-                }
                 .skills-text{
                     text-align: center;
-                    padding-left: 5%;
-                    padding-right: 5%;
+                    padding-left: 3%;
+                    padding-right: 3%;
                 }
                 .section-break-mobile{
                     width: 65%;
@@ -304,29 +300,31 @@
                 .video-container {
                     padding-top: 5%; /* Adjust aspect ratio if needed for smaller screens */
                 }
-                .UCF-logo{
-                    /*height: 100px; */
-                    /*width: 100px; */
-                    /* float: right; */
+                .frito-logo{
+                    height: 100px; 
+                    width: 125px; 
+                    float: none; 
+                    padding-right: 0;
                     display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding-left: 25%;
+                    margin: auto;
+                }
+                .UCF-logo{
+                    height: 100px; 
+                    width: 100px; 
+                    float: none; 
+                    padding-right: 0%;
+                    display: block;
+                    margin: auto;
                 }
                 .corteva-logo{
-                    /*height: 100px; */
-                    /*width: 115px; */
-                    /* float: right; */
-                    
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding-left: 25%;
+                    height: 100px; 
+                    width: 115px; 
+                    float: none; 
+                    padding-right: 0%;
+                    display: block;
+                    margin: auto;
                 }
-                .frito-logo{
-                    /*height: 100px; */
-                    /*width: 125px; */
-                    padding-right: 0;
-                }
+                
             }
         </style>
         <title>Scott's Site</title>
@@ -410,7 +408,7 @@
                     <h1 class="card-title" style="padding-top: 30px; padding-bottom: 30px;">Tech Skills</h1>
                 </div>
 
-                <div class="row">
+                <div class="row g-0">
                     <div class="skills-text">
                         <h5><strong>Languages</strong> - <u>Python</u>, <u>Java</u>, TypeScript, JavaScript, C#, C, SQL, HTML/CSS</h5>
                         <h5><strong>Developer Tools</strong> - <u>Amazon Web Service</u>, <u>Git</u>, GitHub, GitHub Actions, Node.JS, Slurm, NoSQL, Expo, Jira, Batch, Bash</h5>
@@ -432,8 +430,8 @@
                 ADD A 1 SENTENCE DESC for each project. 
                 -->
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>Bias-101</h3>
                             <h5><u>Tools:</u></h5>
@@ -471,8 +469,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>LLaVA Medical</h3>
                             <h5><u>Tools:</u></h5>
@@ -496,8 +494,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>LLM Unit Test Gap Filler</h3>
                             <h5><u>Tools:</u></h5>
@@ -525,8 +523,8 @@
 
                 <hr class="timeline-break-proj">
                 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>MiSu - Smart Home Acccess Control</h3>
                             <h5><u>Tools:</u></h5>
@@ -567,8 +565,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>CLEAR - Comparative Learning and Evaluation of AI and Traditional Denoisers</h3>
                             <p>
@@ -607,8 +605,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>Song Year Classifier</h3>
                             <p>
@@ -639,8 +637,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>Spicy Fitness</h3>
                             <p>
@@ -667,8 +665,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>Online Mulitplayer Chess</h3>
                             <p>
@@ -709,8 +707,8 @@
 
                 <hr class="timeline-break-proj">
 
-                <div class="row">
-                    <div class="col-7 center">
+                <div class="row g-0">
+                    <div class="col-7 center moible-col6">
                         <div class="project-text">
                             <h3>Wordle</h3>
                             <p>
@@ -747,11 +745,11 @@
                 
                 <hr class="timeline-break">
                 
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-0">
+                    <div class="col-4 moible-col4">
                         <img src="Corteva_logo.png" class="corteva-logo">
                     </div>
-                    <div class="col-6" style="padding-bottom: 15px;">
+                    <div class="col-6 moible-col6" style="padding-bottom: 15px;">
                         <h4 style="padding-top: 10px;">Corteva Agriscience</h4>
                         <p>Software Engineering Intern, May 2025 - Aug 2025<br>Des Moines, IA</p>
                         <p style="padding-bottom: 15px;">
@@ -762,11 +760,11 @@
                 
                 <hr class="timeline-break">
                 
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-0">
+                    <div class="col-4 moible-col4">
                         <img src="UCF_logo.png" class="UCF-logo">
                     </div>
-                    <div class="col-6" style="padding-bottom: 15px;">
+                    <div class="col-6 moible-col6" style="padding-bottom: 15px;">
                         <h4 style="padding-top: 10px;">University of Central Florida</h4>
                         <p>Teaching Assistant, Jan 2024 - Dec 2024<br>Orlando, FL</p>
                         <p style="padding-bottom: 15px;">
@@ -780,11 +778,11 @@
 
                 <hr class="timeline-break">
                 
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-0">
+                    <div class="col-4 moible-col4">
                         <img src="frito_lay_logo.png" class="frito-logo">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 moible-col6">
                         <h4 style="padding-top: 10px;">Frito-Lay</h4>
                         <p>Supply Chain Leader, Jan 2022 - Dec 2022<br>Orlando, FL</p>
                         <p style="padding-bottom: 15px;">
@@ -798,11 +796,11 @@
                 
                 <hr class="timeline-break">
                 
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-0">
+                    <div class="col-4 moible-col4">
                         <img src="frito_lay_logo.png" class="frito-logo">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 moible-col6">
                         <h4 style="padding-top: 10px;">Frito-Lay</h4>
                         <p>Supply Chain Intern, Summer 2021<br>Casa Grande, AZ</p>
                         <p style="padding-bottom: 15px;">
@@ -816,11 +814,11 @@
                 
                 <hr class="timeline-break">
                 
-                <div class="row">
-                    <div class="col-4">
+                <div class="row g-0">
+                    <div class="col-4 moible-col4">
                         <img src="pinchers.jpg" class="UCF-logo">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 moible-col6">
                         <h4 style="padding-top: 10px;">Pinchers Crab Shack</h4>
                         <p>Expediter, Line Cook, Prep Cook, Dish Washer; Feb 2015 - Aug 2017<br>Tampa, FL</p>
                         <p style="padding-bottom: 15px;">
